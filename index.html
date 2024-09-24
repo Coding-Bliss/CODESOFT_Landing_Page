@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Landing Page</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="logo/l2.ico" type="image/x-icon"> <!-- Favicon link -->
+    </head>
+    
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo/l2.ico" style="height: 100px; margin-left: 50px;" alt="Theme Forest Logo" />
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#info">Info</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+    
+
+    <!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="slider">
+        <div class="slides">
+            <img src="img/p1.jpg" class="active" alt="Slide 1">
+            <img src="img/p2.jpg" alt="Slide 2">
+            <img src="img/p3.jpg" alt="Slide 3">
+        </div>
+    </div>
+    <h1>Welcome to Our Forest</h1>
+    <p>Plant a tree, using our platform</p>
+    <button>Get Started</button>
+</section>
+
+    <!-- Info Section -->
+<section id="info" class="info">
+    <div class="info-container">
+        <div class="info-text">
+            <h2>The Melting ICE Crisis</h2>
+            <p>As global temperatures rise, the alarming rate at which ice caps and glaciers are melting poses a significant threat to our planet. The polar regions, once covered in thick layers of ice, are now witnessing unprecedented thawing, leading to rising sea levels that endanger coastal communities worldwide. This loss of ice not only disrupts marine ecosystems but also accelerates climate change by reducing the Earth's albedo effect, which reflects sunlight away from the surface. Furthermore, as habitats for polar bears and other wildlife diminish, biodiversity faces a severe threat. The consequences of melting ice extend far beyond the poles; they ripple through our entire planet, highlighting the urgent need for collective action to mitigate climate change and protect our environment for future generations.</p>
+        </div>
+        <div class="info-image">
+            <img src="img/p4.jpg" alt="Portrait Image">
+        </div>
+    </div>
+</section>
+
+
+<!-- Vision Section -->
+<section id="vision" class="vision">
+    <div class="vision-container">
+        <div class="vision-image">
+            <img src="img/p5.jpg" alt="Vision Image">
+        </div>
+        <div class="vision-text">
+            <h2>Our Vision</h2>
+            <p> we envision a future where the harmony between technology and nature thrives. Our commitment to conserving the environment goes beyond mere words; we actively collaborate with passionate individuals, public communities, and dedicated NGOs to champion sustainable practices. Together, we aspire to create a world where developers harness their skills to build innovative, eco-friendly websites that promote awareness and action towards environmental preservation. By empowering people to join hands in this mission, we aim to cultivate a culture of stewardship, ensuring that future generations inherit a vibrant planet rich in biodiversity. Let us work together to sow the seeds of change, nurturing our Earth for the generations to come, because a sustainable future is not just our goal; it is our shared responsibility.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+        At Theme Forest, we are committed to planting trees and conserving forests to promote a sustainable future. 
+        Our mission goes beyond creating beautiful websites; we believe in the importance of nurturing our planet. 
+        By supporting eco-friendly initiatives, we aim to inspire our community to embrace responsible development practices. 
+        Join us in our journey to protect nature, as we work hand in hand to create a greener tomorrow for generations to come. 
+        Together, we can make a difference, one tree at a time.
+    </p>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Subscribe to our Newsletter</h3>
+        <p>Get updates and latest news about my 💖.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <p>&copy; 2024 The Forest. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slides img');
+    
+        function changeSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === slideIndex) {
+                    slide.classList.add('active');
+                }
+            });
+            slideIndex = (slideIndex + 1) % slides.length; // loop back to the first image
+        }
+    
+        setInterval(changeSlide, 3000); // Change image every 3 seconds
+    </script>
+    
+</body>
+</html>
